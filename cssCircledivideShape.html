@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<style>
+clock-face {
+	width: 270px;
+	height: 270px;
+}
+clock-circle-minutes {
+    width: 252px;
+    height: 252px;
+    display: block;
+    border-radius: 50%;
+    background-color: green;
+    border: 1px solid green;
+    float: left;
+    margin: 1em;
+}
+.ccm-one {
+	z-index: 10000;
+	opacity: .9;
+    background-image:
+        linear-gradient(210deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+.ccm-two {
+	z-index: 10001;
+	opacity: .4;
+	position: relative;
+	left: -286px;
+    background-image:
+        linear-gradient(210deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+		-webkit-transform: rotate(120deg);
+		transform: rotate(120deg);
+}
+.ccm-three {
+	z-index: 10002;
+	opacity: .3;
+	position: relative;
+	left: -572px;
+    background-image:
+        linear-gradient(210deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+		-webkit-transform: rotate(240deg);
+		transform: rotate(240deg);
+}
+clock-triangle-minutes {
+  z-index: 10004;
+  position: relative;
+  top: -27px;
+  left: -799px;
+  border-bottom: 140px solid #0000FF;
+  width: 0;
+  height: 0;
+}
+.ctm-one {
+  opacity: .8;
+  border-left: 84px solid transparent;
+}
+.ctm-two {
+  opacity: .8;
+  border-right: 84px solid transparent;
+}
+clock-square-minutes {
+	width: 27px; 
+	height: 27px; 
+	display: inline-block;
+	position: relative;
+	z-index: 10005;
+}
+.csm-one {
+	background: red;
+	left: -742px;
+	top: -22px;
+}
+.csm-two {
+	background: red;
+	left: -744px;
+	top: -22px;
+}
+.csm-three {
+	background: red;
+	left: -804px;
+	top: 7px;
+}
+.csm-four {
+	background: red;
+	left: -806px;
+	top: 7px;
+}
+</style>
+</head>
+<body>
+<clock-face>
+<clock-circle-minutes class="ccm-one"></clock-circle-minutes>
+<clock-circle-minutes class="ccm-two"></clock-circle-minutes>
+<clock-circle-minutes class="ccm-three"></clock-circle-minutes><br><br><br>
+<clock-triangle-minutes class="ctm-one"></clock-triangle-minutes>
+<clock-triangle-minutes class="ctm-two"></clock-triangle-minutes><br><br><br><br>
+<clock-square-minutes class="csm-one"></clock-square-minutes>
+<clock-square-minutes class="csm-two"></clock-square-minutes>
+<clock-square-minutes class="csm-three"></clock-square-minutes>
+<clock-square-minutes class="csm-four"></clock-square-minutes>
+</clock-face>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/clockCheat.js"></script>
+<link rel="stylesheet" href="css/clockMain.css" type="text/css">
+</head>
+<body onload="startClock()">
+<div id="guessArea">
+<h2 style="color:#eeeeee;text-align:center;">Can you guess what time this reads as?</h2>
+<div id="clockFace">
+<clock-circle-minutes id="ccm-one"></clock-circle-minutes>
+<clock-circle-minutes id="ccm-two"></clock-circle-minutes>
+<clock-circle-minutes id="ccm-three"></clock-circle-minutes>
+<clock-circle-minutes id="ccm-blank"></clock-circle-minutes><br><br><br>
+<div class="triBorder" id="triLeft"></div><div class="triBorder" id="triRight"></div><div class="triBorder" id="triBottom"></div>
+<clock-triangle-minutes id="ctm-one"></clock-triangle-minutes>
+<clock-triangle-minutes id="ctm-two"></clock-triangle-minutes><br><br><br><br>
+<clock-square-minutes id="csm-blank">
+<clock-square-minutes id="csm-one"></clock-square-minutes>
+<clock-square-minutes id="csm-two"></clock-square-minutes>
+<clock-square-minutes id="csm-three"></clock-square-minutes>
+<clock-square-minutes id="csm-four"></clock-square-minutes>
+</clock-square-minutes>
+</div>
+<table id="keyWork">
+	<tr><th class="circle">○</th>
+			<td><span class="red">12</span></td>
+			<td><span class="blue">1</span></td>
+			<td><span class="green">2</span></td>
+			<td><span class="red">3</span></td>
+			<td><span class="green">4</span></td>
+			<td><span class="blue">5</span></td>
+			<td><span class="cyan">6</span></td>
+			<td><span class="yellow">7</span></td>
+			<td><span class="magenta">8</span></td>
+			<td><span class="cyan">9</span></td>
+			<td><span class="magenta">10</span></td>
+			<td><span class="yellow">11</span></td>
+	</tr>
+	<tr><th class="triangle">∆</th>
+			<td><span class="green">H</span></td>
+			<td><span class="red">H</span></td>
+			<td><span class="blue">H</span></td>
+			<td><span class="blue">H</span></td>
+			<td><span class="red">H</span></td>
+			<td><span class="green">H</span></td>
+			<td><span class="magenta">H</span></td>
+			<td><span class="cyan">H</span></td>
+			<td><span class="yellow">H</span></td>
+			<td><span class="yellow">H</span></td>
+			<td><span class="cyan">H</span></td>
+			<td><span class="magenta">H</span></td>
+	</tr>
+	<tr><th class="square">□</th>
+			<td><span class="blue">R</span></td>	
+			<td><span class="green">R</span></td>
+			<td><span class="red">R</span></td>
+			<td><span class="green">R</span></td>
+			<td><span class="blue">R</span></td>	
+			<td><span class="red">R</span></td>
+			<td><span class="yellow">R</span></td>
+			<td><span class="magenta">R</span></td>
+			<td><span class="cyan">R</span></td>
+			<td><span class="magenta">R</span></td>
+			<td><span class="yellow">R</span></td>
+			<td><span class="cyan">R</span></td>
+	<tr>
+</table>
+			
+			
+			
+			
+<!--		
+<br><br>
+<table id="clockKey" style="background-color:#090909;">
+	<tr>
+		<td class="circle">○</td>
+		<td class="triangle">∆</td>
+		<td class="square">□</td>
+		<td class="circle">○</td>
+		<td class="triangle">∆</td>
+		<td class="square">□</td>
+		<td class="circle">○</td>
+		<td class="triangle">∆</td>
+		<td class="square">□</td>
+		<td class="circle">○</td>
+		<td class="triangle">∆</td>
+		<td class="square">□</td>
+		<td class="circle">○</td>
+		<td class="triangle">∆</td>
+		<td class="square">□</td>
+		<td class="circle">○</td>
+		<td class="triangle">∆</td>
+		<td class="square">□</td>
+	</tr>
+	<tr>
+		<span id="12hr">
+			<td><span class="red">12</span></td>
+			<td><span class="green">H</span></td>
+			<td><span class="blue">R</span></td>	
+		</span>
+		<span id="1hr">
+			<td><span class="blue">1</span></td>
+			<td><span class="red">H</span></td>
+			<td><span class="green">R</span></td> 
+		</span>
+		<span id="2hr">
+			<td><span class="green">2</span></td>
+			<td><span class="blue">H</span></td>
+			<td><span class="red">R</span></td>
+		</span>
+		<span id="3hr">
+			<td><span class="red">3</span></td>
+			<td><span class="blue">H</span></td>
+			<td><span class="green">R</span></td>
+		</span>
+		<span id="4hr">
+			<td><span class="green">4</span></td>
+			<td><span class="red">H</span></td>
+			<td><span class="blue">R</span></td>	
+		</span>
+		<span id="5hr">
+			<td><span class="blue">5</span></td>
+			<td><span class="green">H</span></td>
+			<td><span class="red">R</span></td>
+		</span>
+	</tr>
+	<tr>
+		<span id="6hr">
+			<td><span class="cyan">6</span></td>
+			<td><span class="magenta">H</span></td>
+			<td><span class="yellow">R</span></td>
+		</span>
+		<span id="7hr">
+			<td><span class="yellow">7</span></td>
+			<td><span class="cyan">H</span></td>
+			<td><span class="magenta">R</span></td>
+		</span>
+		<span id="8hr">
+			<td><span class="magenta">8</span></td>
+			<td><span class="yellow">H</span></td>
+			<td><span class="cyan">R</span></td>
+		</span>
+		<span id="9hr">
+			<td><span class="cyan">9</span></td>
+			<td><span class="yellow">H</span></td>
+			<td><span class="magenta">R</span></td>
+		</span>
+		<span id="10hr">
+			<td><span class="magenta">10</span></td>
+			<td><span class="cyan">H</span></td>
+			<td><span class="yellow">R</span></td>
+		</span>
+		<span id="11hr">
+			<td><span class="yellow">11</span></td>
+			<td><span class="magenta">H</span></td>
+			<td><span class="cyan">R</span></td>
+		</span>
+	</tr>
+</table>-->
+<p>Input guess below</p>
+<div id="guesser">
+<label for="hourGuess">hour<br>
+<input type="number" min="1" max="12" name="hourGuess" id="hourGuess"></label>
+<label for="minuteGuess">minute<br>
+<input type="number" min="0" max="60" name="minuteGuess" id="minuteGuess"></label>
+</div>
+<br><br>
+<button id="chGuess">Check Guess</button>
+</div>
+<br><br>
+<main>
+<button onclick="timeCheat()" id="timeShow">Show me your secrets!</button>
+<p id="testCheck" style="display: none;"></p>
+</main>
+<p id="showCircleSeconds"></p>
+<!--<p id="cirlceSecLab"> x 15 seconds</p>-->
+<p id="showTriSeconds"></p>
+<!--<p id="triSecLab"> x 5 seconds</p>-->
+<p id="showSquareSeconds"></p>
+<!--<p id="squSecLab"> x 1 seconds</p>-->
+<p id="showHours"></p>
+<h1>clock</h1>
+<footer>
+  <p style="font-family:calibri;font-size:9pt;color:white;">
+  All elements of this page, including images, and source code are Copyright <a href="https://twoson.000webhostapp.com/" title="rj media" target="_blank"><img class="copyImg" src="logocopydarkgreymatte.gif" width="19px" height="19px"></a> &copy; 2017 Designed and created in Winnipeg, Canada.
+  </p>
+ </footer>
+<script src="js/clockMainSr.js"></script>
+</body>
+</html>

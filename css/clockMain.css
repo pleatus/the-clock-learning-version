@@ -1,0 +1,272 @@
+body {
+	background: #090909;
+	text-align:center;
+}
+h1 { 
+	color: #eeeeee;
+}
+#clockFace {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 270px;
+	height: 270px;
+}
+clock-circle-minutes {
+    width: 252px;
+    height: 252px;
+    border-radius: 50%;
+    background-color: green;
+    float: left;
+    margin: 1em;
+}
+#ccm-one {
+	display: none;
+	z-index: 10000;
+	position: absolute;
+	opacity: .9;
+    background-image:
+        linear-gradient(210deg, transparent 50%, #090909 50%),
+        linear-gradient(90deg, #090909 50%, transparent 50%);
+}
+#ccm-two {
+    display: none;
+	z-index: 10001;
+	opacity: .4;
+	position: absolute;
+    background-image:
+        linear-gradient(210deg, transparent 50%, #090909 50%),
+        linear-gradient(90deg, #090909 50%, transparent 50%);
+		-webkit-transform: rotate(120deg);
+		transform: rotate(120deg);
+}
+#ccm-three {
+    display: none;
+	z-index: 10002;
+	opacity: .2;
+	position: absolute;
+    background-image:
+        linear-gradient(210deg, transparent 50%, #090909 50%),
+        linear-gradient(90deg, #090909 50%, transparent 50%);
+		-webkit-transform: rotate(240deg);
+		transform: rotate(240deg);
+}
+#ccm-blank{
+	z-index: 9999;
+	border: 1px solid #fff;
+	background-color: rgba(0,0,0,0);
+	position: absolute;
+	display: block;
+}
+clock-triangle-minutes {
+	float: left;
+	z-index: 10004;
+	position: absolute;
+	border-bottom: 140px solid #0000FF;
+	width: 0;
+	height: 0;
+}
+.triBorder {
+	position: absolute;
+	border-bottom: 1px solid white;
+	width: 168px;
+	height: 168px;
+	background-color: transparent;
+	z-index: 10005;
+}
+#triLeft {
+	width: 164px;
+	transform: rotate(59deg);
+	left: 173px;
+	top: -8px;
+}
+#triRight {
+	width: 164px;
+	transform: rotate(-59deg);
+	left: -56px;
+	top: -8px;
+}
+#triBottom {
+	left: 56px;
+	top: 21px;
+}
+#ctm-one {
+	transform: inherit;
+	display: none;
+	top: 50px;
+	left: 58px;
+	opacity: .8;
+	border-left: 84px solid transparent;
+}
+#ctm-two {
+	transform: inherit;
+	display: none;
+	top: 50px;
+	left: 142px;
+	opacity: .8;
+	border-right: 84px solid transparent;
+}
+clock-square-minutes {
+	float: left;
+	width: 27px; 
+	height: 27px;
+	background: red;
+	position: absolute;
+	z-index: 10005;
+}
+#csm-blank {
+	positon:relative;
+	top: 114px;
+	left: 114px;
+	width: 54px;
+	height: 54px;
+	border: 1px solid white;
+	background: transparent;
+}
+#csm-one {
+	display: none;
+	left:0px;
+	top: 0px;
+}
+#csm-two {
+	display: none;
+	left: 27px;
+	top: 0px;
+}
+#csm-three {
+	display: none;
+	left: 0px;
+	top: 27px;
+}
+#csm-four {
+	display: none;
+	left: 27px;
+	top: 27px;
+}
+#clock { 
+	text-align: center;
+}
+#circleSecLab #triSecLab #squSecLab{
+	display: visible;
+}
+#showCircleSeconds {
+	display: inline-block;
+	color: #eeeeee;
+	font-size: 1.1em;
+}
+#showTriSeconds {
+	display: inline-block;
+	color: #eeeeee;
+	font-size: 1.1em;
+}
+#showSquareSeconds {
+	display: inline-block;
+	color: #eeeeee;
+	font-size: 1.1em;
+}
+#showCircleMinutes {
+	color: #00FFFF;
+	font-size: 2.3em;
+	line-height: 2%;
+}
+#showTriMinutes {
+	color: #FFFF00;
+	font-size: 2.1em;
+	line-height: 2%;
+}
+#showSquareMinutes {
+	color: #FF00FF;
+	font-size: 2.3em;
+	line-height: 10%;
+}
+#testCheck {
+	width: 80%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: left;
+	color: #999999;
+}
+#clockKey {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+div#guesser {
+	margin-left:auto;
+	margin-right:auto;
+}
+#guesser input {
+	width:45%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 1.8em;
+	display: block;
+}
+#guesser label {
+	color: #eeeeee;
+}
+button#chGuess {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 1.3em;
+	color: #eeeeee;
+	width:33%;
+	height:90px;
+	background: #090909;
+}
+table#clockKey {
+	background: #494949;
+	margin-top: 9px;
+	margin-right:auto;
+	margin-left:auto;
+	border-bottom: solid 1px #eeeeee;
+}
+table#clockKey td:nth-child(1),table#clockKey  td:nth-child(3n+4) {
+	border-left: 1px solid #eeeeee;
+	padding-left: 9px;
+}
+table#clockKey td:nth-child(18) {
+	border-right: 1px solid #eeeeee;
+}
+table#clockKey td {
+	padding: 15px 3px 0px 3px;
+	border-top: 1px solid #eeeeee;
+}
+table#keyWork {
+	margin-top: 36px;
+	width: 45%;
+	margin-left:auto;
+	margin-right:auto;
+	border: 1px solid #eeeeee;
+}
+table#keyWork td {
+	border-left: 1px solid #eeeeee;
+}
+.circle, .triangle, .square {
+	color: #eeeeee;
+}
+.red {
+color: #FF0000;
+}
+.blue {
+color: #0000FF;
+}
+.green {
+color: #00FF00;
+}
+.magenta {
+color: magenta;
+}
+.cyan {
+color: cyan;
+}
+.yellow {
+color: yellow;
+}
+img:last-of-type {
+	display: none;
+}
+img.copyImg {
+	display: inline-block;
+}
